@@ -1,0 +1,259 @@
+<div class="toolbar">
+    <div  fxLayout="row" fxLayoutAlign="space-between center">
+        <div>
+            <div fxLayout="row" fxLayoutAlign="start center" > 
+                <input class="input" matInput #message maxlength="256" placeholder="Search experts">
+            </div>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="end center" >
+            <mat-icon class="icon2 icon3">home</mat-icon>
+            <mat-divider vertical class="dvrv"></mat-divider>
+            <mat-icon class="icon2 icon4"> chat</mat-icon>
+            <mat-divider vertical class="dvrv"></mat-divider>
+            <mat-icon class="icon2 icon4">notification_important</mat-icon>
+            <mat-divider vertical class="dvrv"></mat-divider>
+            <img class="circle-container" src='https://thumbs.dreamstime.com/b/handsome-man-hair-style-beard-beauty-face-portrait-fashion-male-model-black-hair-high-resolution-handsome-man-125031765.jpg'>
+        </div>
+    </div>
+   
+</div>
+
+<div fxLayout="row" class="main">
+    <div fxFlex="23" class="c1">
+        <div fxLayout="column" fxLayoutAlign="space-evenly center">
+            <div fxLayout="column" class="side">
+                <div fxLayout="row" class="element">
+                    <mat-icon class="icon">dashboard</mat-icon>
+                    <mat-card-title>dashboard</mat-card-title>
+                </div>
+                <div fxLayout="row" class="element">
+                    <mat-icon class="icon">date_range</mat-icon>
+                    <mat-card-title>Calander</mat-card-title>
+                </div>
+                <div fxLayout="row" class="element">
+                    <mat-icon class="icon">device_hub</mat-icon>
+                    <mat-card-title>Integrations</mat-card-title>
+                </div>
+                <div fxLayout="row" class="element">
+                    <mat-icon class="icon">attach_money</mat-icon>
+                    <mat-card-title>Earnings</mat-card-title>
+                </div>
+                <div fxLayout="row" class="element">
+                    <mat-icon class="icon">data_usage</mat-icon>
+                    <mat-card-title>Support</mat-card-title>
+                </div>
+                <div fxLayout="row" class="element">
+                    <mat-icon class="icon">settings</mat-icon>
+                    <mat-card-title>Settings</mat-card-title>
+                </div>
+                <div fxLayout="row" class="element">
+                    <mat-icon class="icon">exit_to_app</mat-icon>
+                    <mat-card-title>Logout</mat-card-title>
+                </div>
+            </div>  
+            <mat-card class="grey crd1">
+                <mat-card-title>Profile Incomplete</mat-card-title>
+                <mat-card-subtitle>Get more by setting up a profile you love.</mat-card-subtitle>
+                <mat-card-actions>
+                    <div fxLayout="row" fxLayoutAlign="start center" class="element">
+                        <mat-icon class="circle1">done</mat-icon>
+                        <mat-card-subtitle class="sub">Email Verified</mat-card-subtitle>
+                    </div>
+                    <div fxLayout="row" class="element">
+                        <mat-icon class="circle2">done</mat-icon>
+                        <mat-card-subtitle class="sub2">Fill up your experience level</mat-card-subtitle>
+                    </div>
+                    <div fxLayout="column" fxLayoutAlign="space-between center"> 
+                        <button mat-stroked-button class="btn1">Complete your Profile</button>
+                        <button mat-stroked-button class="btn2">Profile 70% Completed</button>
+                    </div>
+                </mat-card-actions>
+            </mat-card>        
+        </div>
+    </div>
+    <div fxFlex="73">
+        <h1>Calendars</h1>
+        <div fxLayout="column" fxLayoutAlign="center">
+        <mat-card class="example-card" class="rad">
+            <div fxLayout="row" fxLayoutAlign="space-between center" class="margin5">
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <img mat-card-sm-image src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Calendar_icon_%282020%29.svg/768px-Google_Calendar_icon_%282020%29.svg.png" class="image">
+                    <mat-card-title-group>
+                      <mat-card-title>Google Calendar</mat-card-title>
+                      <mat-card-subtitle>Manage your meetings throught your google calendar, seemlessly</mat-card-subtitle>
+                    </mat-card-title-group>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="end center">
+                    <mat-card-content *ngIf="vis1" class="txt">
+                        Connected
+                    </mat-card-content>
+                    <button mat-raised-button color="primary" class="btn" (click)="fun1()">{{toggle1 ? 'Connect' : 'Disconnect'}}</button>
+                </div>
+            </div>
+            <mat-divider class="margin5 dvr"></mat-divider>
+            <div fxLayout="row" fxLayoutAlign="space-between center" class="margin5">
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <img mat-card-sm-image src="https://i.pinimg.com/originals/1c/18/61/1c1861046d8f837de76fa78fcad98b7a.png" class="image">
+                    <mat-card-title-group>
+                      <mat-card-title>iCalendar</mat-card-title>
+                      <mat-card-subtitle>Manage your meetings throught your iCalendar, seemlessly</mat-card-subtitle>
+                    </mat-card-title-group>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="end center">
+                    <mat-card-content *ngIf="vis2" class="txt">
+                        Connected
+                    </mat-card-content>
+                    <button mat-raised-button color="primary" class="btn" (click)="fun2()">{{toggle2 ? 'Connect' : 'Disconnect'}}</button>
+                </div>
+            </div>
+            <mat-divider class="margin5 dvr"></mat-divider>
+            <div fxLayout="row" fxLayoutAlign="space-between center" class="margin5">
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <img mat-card-sm-image src="https://icon-library.com/images/microsoft-outlook-icon/microsoft-outlook-icon-24.jpg" class="image">
+                    <mat-card-title-group>
+                      <mat-card-title>Outlook Calendar</mat-card-title>
+                      <mat-card-subtitle>Manage your meetings throught your outlook calendar, seemlessly</mat-card-subtitle>
+                    </mat-card-title-group>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="end center">
+                    <mat-card-content *ngIf="vis3" class="txt">
+                        Connected
+                    </mat-card-content>
+                    <button mat-raised-button color="primary" class="btn" (click)="fun3()">{{toggle3 ? 'Connect' : 'Disconnect'}}</button>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+    <h1>Video Calling</h1>
+    <div fxLayout="column" fxLayoutAlign="center">
+        <mat-card class="example-card" class="rad">
+            <div fxLayout="row" fxLayoutAlign="space-between center" class="margin5">
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <img mat-card-sm-image src="https://www.daily.co/blog/favicon.png" class="image">
+                    <mat-card-title-group>
+                      <mat-card-title>Daily.co (Default)</mat-card-title>
+                      <mat-card-subtitle>Automatically create link when you book a meeting</mat-card-subtitle>
+                    </mat-card-title-group>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="end center">
+                    <mat-card-content class="txt">
+
+                    </mat-card-content>
+                    <button mat-raised-button color="primary" class="btn">Connect</button>
+                </div>
+            </div>
+            <mat-divider class="margin5 dvr"></mat-divider>
+            <div fxLayout="row" fxLayoutAlign="space-between center" class="margin5">
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <img mat-card-sm-image src="https://cdn.icon-icons.com/icons2/3053/PNG/512/zoom_macos_bigsur_icon_189524.png" class="image">
+                    <mat-card-title-group>
+                      <mat-card-title>Zoom</mat-card-title>
+                      <mat-card-subtitle>Automatically create link when you book a meeting</mat-card-subtitle>
+                    </mat-card-title-group>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="end center">
+                    <mat-card-content class="txt">
+
+                    </mat-card-content>
+                    <button mat-raised-button color="primary" class="btn">Connect</button>
+                </div>
+            </div>
+            <mat-divider class="margin5 dvr"></mat-divider>
+            <div fxLayout="row" fxLayoutAlign="space-between center" class="margin5">
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <img mat-card-sm-image src="https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/48/google-meet-512.png" class="image">
+                    <mat-card-title-group>
+                      <mat-card-title>Google Meet</mat-card-title>
+                      <mat-card-subtitle>Automatically create link when you book a meeting</mat-card-subtitle>
+                    </mat-card-title-group>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="end center">
+                    <mat-card-content class="txt">
+
+                    </mat-card-content>
+                    <button mat-raised-button color="primary" class="btn">Connect</button>
+                </div>
+            </div>
+            <mat-divider class="margin5 dvr"></mat-divider>
+            <div fxLayout="row" fxLayoutAlign="space-between center" class="margin5">
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <img mat-card-sm-image src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg/2203px-Microsoft_Office_Teams_%282018%E2%80%93present%29.svg.png" class="image">
+                    <mat-card-title-group>
+                      <mat-card-title>Microsoft Teams</mat-card-title>
+                      <mat-card-subtitle>Automatically create link when you book a meeting</mat-card-subtitle>
+                    </mat-card-title-group>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="end center">
+                    <mat-card-content class="txt">
+
+                    </mat-card-content>
+                    <button mat-raised-button color="primary" class="btn">Connect</button>
+                </div>
+            </div>
+            
+        </mat-card>
+    </div>
+    <h1>Payments</h1>
+    <div fxLayout="column" fxLayoutAlign="center">
+        <mat-card class="example-card" class="rad">
+            <div fxLayout="row" fxLayoutAlign="space-between center" class="margin5">
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <img mat-card-sm-image src="https://www.nicepng.com/png/detail/19-194337_paypal-logo-transparent-png-paypal-logo-transparent.png" class="image">
+                    <mat-card-title-group>
+                      <mat-card-title>Paypal</mat-card-title>
+                      <mat-card-subtitle>Collect payment before the meeting.</mat-card-subtitle>
+                    </mat-card-title-group>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="end center">
+                    <mat-card-content class="txt">
+
+                    </mat-card-content>
+                    <button mat-raised-button color="primary" class="btn">Connect</button>
+                </div>
+            </div>
+            <mat-divider class="margin5 dvr"></mat-divider>
+            <div fxLayout="row" fxLayoutAlign="space-between center" class="margin5">
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <img mat-card-sm-image src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Stripe_Logo%2C_revised_2016.svg/1280px-Stripe_Logo%2C_revised_2016.svg.png" class="image">
+                    <mat-card-title-group>
+                      <mat-card-title>Stripe</mat-card-title>
+                      <mat-card-subtitle>Collect payment before the meeting.</mat-card-subtitle>
+                    </mat-card-title-group>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="end center">
+                    <mat-card-content class="txt">
+
+                    </mat-card-content>
+                    <button mat-raised-button color="primary" class="btn">Connect</button>
+                </div>
+            </div> 
+        </mat-card>
+    </div>
+    </div>
+</div>
+<div class="toolbar">
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <div class="footer">
+            Helps
+        </div>
+        <div class="footer">
+            Terms of Services  Cookies GDRP
+        </div>
+        <div class="footer">
+            Privacy Policy
+        </div>
+        <div class="footer">
+            Cookies 
+        </div>
+        <div class="footer">
+            GDRP
+        </div>
+        <div class="footer">
+            info@smartmentor.io
+        </div>
+        <div class="footer">
+            © 2022 SmartMentor FZ-LLC
+        </div>     
+    </div>
+</div>
