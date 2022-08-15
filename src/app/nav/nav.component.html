@@ -1,18 +1,19 @@
 <div class="toolbar">
-    <div  fxLayout="row" fxLayoutAlign="space-between center">
-        <div>
-            <div fxLayout="row" fxLayoutAlign="start center" > 
-                <input class="input" matInput #message maxlength="256" placeholder="Search experts">
-            </div>
+    <div  fxLayout="row" fxLayoutAlign=" center">
+        <img class="logo" src='data:image/png;base64,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'>
+        <div style="font-size: 10px">
+            <mat-form-field appearance="outline" class="search">
+                <mat-icon matPrefix class="icon4">search</mat-icon>
+                <input matInput type="search" placeholder="Search experts" class="search-input">
+            </mat-form-field> 
         </div>
 
-        <div fxLayout="row" fxLayoutAlign="end center" >
+        <div fxLayout="row" fxLayoutAlign="end center" class="end">
             <mat-icon class="icon2 icon3">home</mat-icon>
             <mat-divider vertical class="dvrv"></mat-divider>
             <mat-icon class="icon2 icon4"> chat</mat-icon>
             <mat-divider vertical class="dvrv"></mat-divider>
             <mat-icon class="icon2 icon4">notification_important</mat-icon>
-            <mat-divider vertical class="dvrv"></mat-divider>
             <img class="circle-container" src='https://thumbs.dreamstime.com/b/handsome-man-hair-style-beard-beauty-face-portrait-fashion-male-model-black-hair-high-resolution-handsome-man-125031765.jpg'>
         </div>
     </div>
@@ -20,47 +21,47 @@
 </div>
 
 <div fxLayout="row" class="main">
-    <div fxFlex="23" class="c1">
-        <div fxLayout="column" fxLayoutAlign="space-evenly center">
+    <div fxFlex="20" class="c1">
+        <div fxLayout="column" fxLayoutAlign="space-evenly start">
             <div fxLayout="column" class="side">
                 <div fxLayout="row" class="element">
                     <mat-icon class="icon">dashboard</mat-icon>
-                    <mat-card-title>dashboard</mat-card-title>
+                    <mat-card-title class="title1">Dashboard</mat-card-title>
                 </div>
                 <div fxLayout="row" class="element">
                     <mat-icon class="icon">date_range</mat-icon>
-                    <mat-card-title>Calander</mat-card-title>
+                    <mat-card-title class="title1">Calander</mat-card-title>
                 </div>
                 <div fxLayout="row" class="element">
-                    <mat-icon class="icon">device_hub</mat-icon>
-                    <mat-card-title>Integrations</mat-card-title>
+                    <mat-icon class="icon" style="color: cornflowerblue">device_hub</mat-icon>
+                    <mat-card-title class="title1">Integrations</mat-card-title>
                 </div>
                 <div fxLayout="row" class="element">
                     <mat-icon class="icon">attach_money</mat-icon>
-                    <mat-card-title>Earnings</mat-card-title>
+                    <mat-card-title class="title1">Earnings</mat-card-title>
                 </div>
                 <div fxLayout="row" class="element">
                     <mat-icon class="icon">data_usage</mat-icon>
-                    <mat-card-title>Support</mat-card-title>
+                    <mat-card-title class="title1">Support</mat-card-title>
                 </div>
                 <div fxLayout="row" class="element">
                     <mat-icon class="icon">settings</mat-icon>
-                    <mat-card-title>Settings</mat-card-title>
+                    <mat-card-title class="title1">Settings</mat-card-title>
                 </div>
                 <div fxLayout="row" class="element">
                     <mat-icon class="icon">exit_to_app</mat-icon>
-                    <mat-card-title>Logout</mat-card-title>
+                    <mat-card-title class="title1">Logout</mat-card-title>
                 </div>
             </div>  
             <mat-card class="grey crd1">
                 <mat-card-title>Profile Incomplete</mat-card-title>
                 <mat-card-subtitle>Get more by setting up a profile you love.</mat-card-subtitle>
                 <mat-card-actions>
-                    <div fxLayout="row" fxLayoutAlign="start center" class="element">
+                    <div fxLayout="row" fxLayoutAlign="start center" class="mg10">
                         <mat-icon class="circle1">done</mat-icon>
                         <mat-card-subtitle class="sub">Email Verified</mat-card-subtitle>
                     </div>
-                    <div fxLayout="row" class="element">
+                    <div fxLayout="row" class="mg10">
                         <mat-icon class="circle2">done</mat-icon>
                         <mat-card-subtitle class="sub2">Fill up your experience level</mat-card-subtitle>
                     </div>
@@ -72,7 +73,7 @@
             </mat-card>        
         </div>
     </div>
-    <div fxFlex="73">
+    <div fxFlex="72" class="c3">
         <h1>Calendars</h1>
         <div fxLayout="column" fxLayoutAlign="center">
         <mat-card class="example-card" class="rad">
@@ -80,8 +81,8 @@
                 <div fxLayout="row" fxLayoutAlign="start center">
                     <img mat-card-sm-image src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Calendar_icon_%282020%29.svg/768px-Google_Calendar_icon_%282020%29.svg.png" class="image">
                     <mat-card-title-group>
-                      <mat-card-title>Google Calendar</mat-card-title>
-                      <mat-card-subtitle>Manage your meetings throught your google calendar, seemlessly</mat-card-subtitle>
+                      <mat-card-title class="title2">Google Calendar</mat-card-title>
+                      <mat-card-subtitle class="title3">Manage your meetings throught your google calendar, seemlessly</mat-card-subtitle>
                     </mat-card-title-group>
                 </div>
                 <div fxLayout="row" fxLayoutAlign="end center">
@@ -96,8 +97,8 @@
                 <div fxLayout="row" fxLayoutAlign="start center">
                     <img mat-card-sm-image src="https://i.pinimg.com/originals/1c/18/61/1c1861046d8f837de76fa78fcad98b7a.png" class="image">
                     <mat-card-title-group>
-                      <mat-card-title>iCalendar</mat-card-title>
-                      <mat-card-subtitle>Manage your meetings throught your iCalendar, seemlessly</mat-card-subtitle>
+                      <mat-card-title class="title2">iCalendar</mat-card-title>
+                      <mat-card-subtitle class="title3">Manage your meetings throught your iCalendar, seemlessly</mat-card-subtitle>
                     </mat-card-title-group>
                 </div>
                 <div fxLayout="row" fxLayoutAlign="end center">
@@ -112,8 +113,8 @@
                 <div fxLayout="row" fxLayoutAlign="start center">
                     <img mat-card-sm-image src="https://icon-library.com/images/microsoft-outlook-icon/microsoft-outlook-icon-24.jpg" class="image">
                     <mat-card-title-group>
-                      <mat-card-title>Outlook Calendar</mat-card-title>
-                      <mat-card-subtitle>Manage your meetings throught your outlook calendar, seemlessly</mat-card-subtitle>
+                      <mat-card-title class="title2">Outlook Calendar</mat-card-title>
+                      <mat-card-subtitle class="title3">Manage your meetings throught your outlook calendar, seemlessly</mat-card-subtitle>
                     </mat-card-title-group>
                 </div>
                 <div fxLayout="row" fxLayoutAlign="end center">
@@ -132,8 +133,8 @@
                 <div fxLayout="row" fxLayoutAlign="start center">
                     <img mat-card-sm-image src="https://www.daily.co/blog/favicon.png" class="image">
                     <mat-card-title-group>
-                      <mat-card-title>Daily.co (Default)</mat-card-title>
-                      <mat-card-subtitle>Automatically create link when you book a meeting</mat-card-subtitle>
+                      <mat-card-title class="title2">Daily.co (Default)</mat-card-title>
+                      <mat-card-subtitle class="title3">Automatically create link when you book a meeting</mat-card-subtitle>
                     </mat-card-title-group>
                 </div>
                 <div fxLayout="row" fxLayoutAlign="end center">
@@ -148,8 +149,8 @@
                 <div fxLayout="row" fxLayoutAlign="start center">
                     <img mat-card-sm-image src="https://cdn.icon-icons.com/icons2/3053/PNG/512/zoom_macos_bigsur_icon_189524.png" class="image">
                     <mat-card-title-group>
-                      <mat-card-title>Zoom</mat-card-title>
-                      <mat-card-subtitle>Automatically create link when you book a meeting</mat-card-subtitle>
+                      <mat-card-title class="title2">Zoom</mat-card-title>
+                      <mat-card-subtitle class="title3">Automatically create link when you book a meeting</mat-card-subtitle>
                     </mat-card-title-group>
                 </div>
                 <div fxLayout="row" fxLayoutAlign="end center">
@@ -164,8 +165,8 @@
                 <div fxLayout="row" fxLayoutAlign="start center">
                     <img mat-card-sm-image src="https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/48/google-meet-512.png" class="image">
                     <mat-card-title-group>
-                      <mat-card-title>Google Meet</mat-card-title>
-                      <mat-card-subtitle>Automatically create link when you book a meeting</mat-card-subtitle>
+                      <mat-card-title class="title2">Google Meet</mat-card-title>
+                      <mat-card-subtitle class="title3">Automatically create link when you book a meeting</mat-card-subtitle>
                     </mat-card-title-group>
                 </div>
                 <div fxLayout="row" fxLayoutAlign="end center">
@@ -180,8 +181,8 @@
                 <div fxLayout="row" fxLayoutAlign="start center">
                     <img mat-card-sm-image src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg/2203px-Microsoft_Office_Teams_%282018%E2%80%93present%29.svg.png" class="image">
                     <mat-card-title-group>
-                      <mat-card-title>Microsoft Teams</mat-card-title>
-                      <mat-card-subtitle>Automatically create link when you book a meeting</mat-card-subtitle>
+                      <mat-card-title class="title2">Microsoft Teams</mat-card-title>
+                      <mat-card-subtitle class="title3">Automatically create link when you book a meeting</mat-card-subtitle>
                     </mat-card-title-group>
                 </div>
                 <div fxLayout="row" fxLayoutAlign="end center">
@@ -201,8 +202,8 @@
                 <div fxLayout="row" fxLayoutAlign="start center">
                     <img mat-card-sm-image src="https://www.nicepng.com/png/detail/19-194337_paypal-logo-transparent-png-paypal-logo-transparent.png" class="image">
                     <mat-card-title-group>
-                      <mat-card-title>Paypal</mat-card-title>
-                      <mat-card-subtitle>Collect payment before the meeting.</mat-card-subtitle>
+                      <mat-card-title class="title2">Paypal</mat-card-title>
+                      <mat-card-subtitle  class="title3">Collect payment before the meeting.</mat-card-subtitle>
                     </mat-card-title-group>
                 </div>
                 <div fxLayout="row" fxLayoutAlign="end center">
@@ -217,8 +218,8 @@
                 <div fxLayout="row" fxLayoutAlign="start center">
                     <img mat-card-sm-image src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Stripe_Logo%2C_revised_2016.svg/1280px-Stripe_Logo%2C_revised_2016.svg.png" class="image">
                     <mat-card-title-group>
-                      <mat-card-title>Stripe</mat-card-title>
-                      <mat-card-subtitle>Collect payment before the meeting.</mat-card-subtitle>
+                      <mat-card-title  class="title2">Stripe</mat-card-title>
+                      <mat-card-subtitle class="title3">Collect payment before the meeting.</mat-card-subtitle>
                     </mat-card-title-group>
                 </div>
                 <div fxLayout="row" fxLayoutAlign="end center">
